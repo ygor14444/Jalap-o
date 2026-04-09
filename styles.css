@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+/* Cabeçalho e Menu */
+.cabecalho {
+    background-color: #ff7300;
+    color: white;
+    text-align: center;
+    padding: 60px;
+}
+
+.menu {
+    background-color: #333;
+    display: flex;
+}
+
+.item-menu {
+    color: white;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item-menu:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.container-corpo {
+    display: flex;
+    max-width: 1200px; 
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.Principal {
+    flex: 3; 
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.coluna-direita {
+    flex: 1; 
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    min-height: 300px;
+}
+
+.foto {
+    width: 100%;
+    height: 150px; 
+    object-fit: cover;
+    background-color: #ccc;
+    border: 1px solid #ddd;
+}
+
+.rodape {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: calc(100% - 40px);
+    margin: 20px auto;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+    .container-corpo {
+        flex-direction: column;
+    }
+    
+    .bloco {
+        grid-template-columns: 1fr 1fr; 
+    }
+}
+
+@media (max-width: 600px) {
+    .bloco {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu {
+        flex-direction: column;
+    }
+
+    .item-menu {
+        text-align: center;
+        width: 100%;
+    }
+
+}
